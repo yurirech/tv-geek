@@ -1,0 +1,5 @@
+{
+  "--single-quote": true,
+  "--no-bracket-spacing": false,
+  "--bracket-same-line": true
+}

@@ -1,5 +1,5 @@
-import { defineConfig } from 'vitest/config'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vitest/config";
+import react from "@vitejs/plugin-react";
 
 export default defineConfig(({ mode }) => ({
   plugins: [react()],
@@ -7,8 +7,8 @@ export default defineConfig(({ mode }) => ({
   //   conditions: mode === 'test' ? ['browser'] : [],
   // },
   test: {
-    environment: 'jsdom',
-    setupFiles: ['./vitest-setup.ts'],
-    globals: true
+    environment: "jsdom",
+    setupFiles: ["./vitest-setup.ts"],
+    globals: true,
   },
-}))
+}));
