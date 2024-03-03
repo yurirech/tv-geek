@@ -24,9 +24,9 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install Dependencies
-        run: yarn install
+        run: yarn install --frozen-lockfile
       - name: Install vitest CLI
-        run: yarn global add vitest
+        run: yarn add vitest
       - name: Test
         run: yarn test
       - name: Deploy
