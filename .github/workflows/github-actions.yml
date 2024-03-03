@@ -26,7 +26,7 @@ jobs:
       - name: Install Dependencies
         run: yarn install --frozen-lockfile
       - name: Install vitest CLI
-        run: yarn add vitest jsdom
+        run: yarn add vitest jsdom @testing-library/react
       - name: Test
         run: yarn test
       - name: Deploy
