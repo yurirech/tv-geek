@@ -20,7 +20,12 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "types": ["vitest/globals"],
-    "typeRoots": ["./node_modules/@types/", "./types", "./node_modules"]
+    "typeRoots": ["./node_modules/@types/", "./types", "./node_modules"],
+
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
