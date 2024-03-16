@@ -1,7 +1,13 @@
-import { Button as ShanButton } from "@/components/ui/button";
+import { Button as CnButton } from "@/components/ui/button";
 
-function Button() {
-  return <ShanButton>Button</ShanButton>;
+interface ButtonProps {
+  label: string;
+  variant: string;
+}
+
+function Button(props: ButtonProps) {
+  const { variant = "outline", label = "Button" } = props;
+  return <CnButton variant="outline">{label}</CnButton>;
 }
 
 export default Button;
