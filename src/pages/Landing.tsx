@@ -3,7 +3,7 @@ import Button from "@/components/Button";
 function Landing() {
   return (
     <div>
-      <Button />
+      <Button label="Button" />
     </div>
   );
 }
