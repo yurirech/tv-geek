@@ -14,7 +14,7 @@ interface ButtonProps {
 }
 
 function Button(props: ButtonProps) {
-  const { variant = "outline", label = "Button" } = props;
+  const { variant = "destructive", label = "Button" } = props;
   return <CnButton variant={variant}>{label}</CnButton>;
 }
 
