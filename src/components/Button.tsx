@@ -11,12 +11,13 @@ interface ButtonProps {
     | "link"
     | null
     | undefined;
+  className: string;
 }
 
 function Button(props: ButtonProps) {
-  const { variant = "destructive", label = "Button" } = props;
+  const { variant = "destructive", label = "Button", className } = props;
   return (
-    <CnButton className="" variant={variant}>
+    <CnButton className={className} variant={variant}>
       {label}
     </CnButton>
   );
