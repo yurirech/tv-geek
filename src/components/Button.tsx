@@ -13,6 +13,7 @@ interface ButtonProps {
     | null;
   size?: "default" | "sm" | "lg" | "icon";
   className?: string;
+  onClick?: () => void;
 }
 
 function Button(props: ButtonProps) {
@@ -21,9 +22,15 @@ function Button(props: ButtonProps) {
     label = "Button",
     size = "default",
     className,
+    onClick,
   } = props;
   return (
-    <CnButton variant={"secondary"} size={size} className={cn(className)}>
+    <CnButton
+      onClick={onClick}
+      variant={variant}
+      size={size}
+      className={cn(className)}
+    >
       {label}
     </CnButton>
   );
