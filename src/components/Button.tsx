@@ -1,4 +1,5 @@
 import { Button as CnButton } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 interface ButtonProps {
   label: string;
@@ -9,15 +10,27 @@ interface ButtonProps {
     | "secondary"
     | "ghost"
     | "link"
-    | null
-    | undefined;
-  className: string;
+    | null;
+  size?: "default" | "sm" | "lg" | "icon";
+  className?: string;
+  onClick?: () => void;
 }
 
 function Button(props: ButtonProps) {
-  const { variant = "destructive", label = "Button", className } = props;
+  const {
+    variant = "default",
+    label = "Button",
+    size = "default",
+    className,
+    onClick,
+  } = props;
   return (
-    <CnButton className={className} variant={variant}>
+    <CnButton
+      onClick={onClick}
+      variant={variant}
+      size={size}
+      className={cn(className)}
+    >
       {label}
     </CnButton>
   );

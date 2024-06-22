@@ -15,12 +15,13 @@ export const theme = {
       "2xl": "1400px",
     },
     colors: {
-      purple: "#633993",
-      green: "#455E48",
+      primary: "#FFF",
     },
   },
   extend: {
     colors: {
+      purple: "#633993",
+      green: "#455E48",
       border: "hsl(var(--border))",
       input: "hsl(var(--input))",
       ring: "hsl(var(--ring))",

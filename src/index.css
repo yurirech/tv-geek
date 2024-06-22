@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Change colors' variables here 
+  Colors have to be in hsl format
+  ie: hsl(0, 0%, 100%)
+*/
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -13,10 +18,10 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 268 44% 40%;
+    --primary: 127.2 15.34% 31.96%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 127 15% 32%;
+    --secondary: 268 44.12% 40%;
     --secondary-foreground: 210 40% 98%;
 
     --muted: 210 40% 96.1%;
