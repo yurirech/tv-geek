@@ -1,4 +1,3 @@
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./App.css";
 import Landing from "./pages/Landing";
 import { Helmet } from "react-helmet";

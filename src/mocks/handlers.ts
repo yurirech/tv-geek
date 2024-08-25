@@ -2,10 +2,14 @@ import { http, HttpResponse } from "msw";
 
 export const handlers = [
   http.get("/api/test", () => {
-    return HttpResponse.json({
-      id: 1,
-      firstName: "Yuri",
-      lastName: "Rech",
-    });
+    return HttpResponse.json(
+      {
+        data: { firstName: "Yuri", lastName: "Rech" },
+        meta: [{}],
+      },
+      {
+        status: 200,
+      },
+    );
   }),
 ];

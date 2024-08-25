@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
 
 function useGetMockedData() {
@@ -5,9 +6,13 @@ function useGetMockedData() {
 
   useEffect(() => {
     async function getMockedData() {
-      const data = await fetch("api/test");
-      const jsonData = await data.json();
-      setData(jsonData);
+      try {
+        const data = await axios.get("api/test");
+        console.log(data.data);
+        setData(data.data);
+      } catch (e) {
+        console.log(e);
+      }
     }
 
     getMockedData();
