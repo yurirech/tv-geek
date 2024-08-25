@@ -6,7 +6,7 @@ function Landing() {
 
   return (
     <div>
-      <Button label="Button" />
+      <Button label="Button" variant="link" color="secondary" />
       <span>{firstName}</span>
       <span>{lastName}</span>
     </div>

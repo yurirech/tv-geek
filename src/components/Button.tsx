@@ -13,7 +13,21 @@ interface ButtonProps {
     | null;
   size?: "default" | "sm" | "lg" | "icon";
   className?: string;
+  color?: "primary" | "secondary";
   onClick?: () => void;
+}
+
+const buttonColors = {
+  "outline-primary": "border-primary text-primary",
+  "outline-secondary": "border-secondary text-secondary",
+  "link-primary": "text-primary",
+  "link-secondary": "text-secondary",
+};
+
+function buttonCombinations(variant: string, color: string) {
+  if (!variant || !color) return;
+  //@ts-expect-error whatever
+  return buttonColors[`${variant}-${color}`];
 }
 
 function Button(props: ButtonProps) {
@@ -21,6 +35,7 @@ function Button(props: ButtonProps) {
     variant = "default",
     label = "Button",
     size = "default",
+    color = "primary",
     className,
     onClick,
   } = props;
@@ -29,7 +44,8 @@ function Button(props: ButtonProps) {
       onClick={onClick}
       variant={variant}
       size={size}
-      className={cn(className)}
+      className={cn(className, buttonCombinations(variant, color))}
+      {...props}
     >
       {label}
     </CnButton>
